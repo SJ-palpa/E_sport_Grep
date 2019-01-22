@@ -1,0 +1,87 @@
+{% extends "blog/pageAvecBanniere.html" %}
+{% block ajout_head_utilisateur %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/importFichier.css' %}">
+{% endblock %}
+{% block nomBanniere %}Fichier{% endblock %}
+{% block contentBanniere %}
+     <div class="container">
+        <h3 class="text-center">Telecharger votre fichier</h3>
+        <p class="text-center">Voici les différents formats acceptés par l'application<br><br></p>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <p><strong>Format Excel</strong></p>
+                    <button class="btn btn-sesf text-light" data-toggle="modal" data-target="#myModal">.XLSX</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <p><strong>Format LibreOffice</strong></p>
+                    <button class="btn btn-sesf text-light" data-toggle="modal" data-target="#myModal">.ODS</button>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <p><strong>Format universel</strong></p>
+                    <button class="btn btn-sesf text-light" data-toggle="modal" data-target="#myModal">.CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5 mt-5">
+
+    <table class="table table-bordered ">
+        <thead>
+        <tr>
+            <th>Inscription finalisé</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Date de naissance</th>
+            <th>Certifié SESF</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="tableMaterialCheck2" checked>
+                    <label class="form-check-label" for="tableMaterialCheck2">Check 1</label>
+                </div>
+            </th>
+            <td>Jean</td>
+            <td>Maurice</td>
+            <td>31/12/2000</td>
+            <td>Oui</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="tableMaterialCheck3">
+                    <label class="form-check-label" for="tableMaterialCheck3">Check 2</label>
+                </div>
+            </th>
+            <td>Antoinette</td>
+            <td>Le corbusier</td>
+            <td>31/12/1999</td>
+            <td>Oui</td>
+        </tr>
+        <tr>
+            <th scope="row">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="tableMaterialCheck4" checked>
+                    <label class="form-check-label" for="tableMaterialCheck4">Check 3</label>
+                </div>
+            </th>
+            <td>Romaric</td>
+            <td>Bon vivant</td>
+            <td>02/11/1945</td>
+            <td>Non</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

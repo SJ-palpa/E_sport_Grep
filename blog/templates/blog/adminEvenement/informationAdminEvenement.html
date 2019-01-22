@@ -1,0 +1,42 @@
+{% extends "blog/pageAvecBanniere.html" %}
+{% block ajout_head_utilisateur %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/informationPersonne.css' %}">
+{% endblock %}
+{% block nomBanniere %}Information{% endblock %}
+{% block contentBanniere %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="text-center icon-utilisateur mb-3 mt-3 ">
+                    <i class="fa fa-user-circle prefix color-clair-sesf"></i>
+                </div>
+                <h2>Elon Musk</h2>
+                <hr>
+                <p>
+                    Inscrit en 3018
+                </p>
+                 <hr>
+                <p>
+                    Adresse: 320 chemin des prunes 01299 vatican
+                </p>
+                 <hr>
+                <p>
+                    Mail : elon.musk@paypal.com
+                </p>
+                 <hr>
+                <p>
+                    Nationalité : Moldave
+                </p>
+                <hr>
+                 <p>
+                    Gamaer ID: active
+                </p>
+                 <hr>
+                <div class="container text-center mb-5">
+                    <a class="btn btn-sesf text-light" href="{% url 'modificationAdminEvenement' %}" role="button">Modifier</a>
+                </div>
+            </div><!-- /.col-lg-4 -->
+        </div>
+    </div>
+{% endblock %}

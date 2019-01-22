@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block ajout_head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/pageAvecBanniere.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+    {% block ajout_head_utilisateur %}
+    {% endblock %}
+{% endblock %}
+{% block content %}
+      <div class="banniere margeBanniere" style="background-image: url('{% static 'blog/img/background-esport.jpg' %}')">
+            <div class="row float-md-left">
+                <svg viewBox="0 0 1260 600">
+                    <symbol id="s-text">
+                        <text text-anchor="middle" x="50%" y="80%">{% block nomBanniere %}{% endblock %}</text>
+                    </symbol>
+
+                    <g class="g-ants">
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                        <use xlink:href="#s-text" class="text-copy"></use>
+                    </g>
+                </svg>
+            </div>
+        </div>
+   {% block contentBanniere %}
+
+   {% endblock %}
+{% endblock %}

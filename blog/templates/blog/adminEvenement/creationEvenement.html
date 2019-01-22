@@ -1,0 +1,121 @@
+{% extends "blog/pageAvecBanniere.html" %}
+{% block ajout_head_utilisateur %}
+    {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static 'blog/css/creationEvenement.css' %}">
+{% endblock %}
+{% block nomBanniere %}Evenement{% endblock %}
+{% block contentBanniere %}
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white ">
+        <div class="col-md-10 mx-auto">
+            <p class="fas fa-calendar-alt icon-evenement color-clair-sesf"></p>
+            <h2 class=" font-weight-normal ">Créer Votre évenement</h2>
+
+
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+    <div class=" container mb-5">
+        <h4 class="mb-3">Informations</h4>
+        <form class="needs-validation" novalidate="">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">Nom</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="email">Email <span class="text-muted">(Optionel)</span></label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                    Please enter a valid email address for shipping updates.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="address">Adresse</label>
+                <input type="text" class="form-control" id="address" placeholder="1234 Rue de berne" required="">
+                <div class="invalid-feedback">
+                    Please enter your shipping address.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="address2">Address 2 <span class="text-muted">(Optionel)</span></label>
+                <input type="text" class="form-control" id="address2" placeholder="Apartment ou suite">
+            </div>
+
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label for="country">Pays</label>
+                    <select class="custom-select d-block w-100" id="country" required="">
+                        <option value="">Choisir</option>
+                        <option>Suisse</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="state">Canton</label>
+                    <select class="custom-select d-block w-100" id="state" required="">
+                        <option value="">Choisir</option>
+                        <option>Genève</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Code postal
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label for="Type">Type(s)</label>
+                    <select class="custom-select d-block w-100" id="country" required="">
+                        <option>Dota2</option>
+                        <option>Smash Bros</option>
+                        <option>LOL</option>
+                        <option>Fortnite</option>
+                    </select>
+                     <select class="custom-select d-block w-100" id="country" required="">
+                        <option>Dota2</option>
+                        <option>Smash Bros</option>
+                        <option>LOL</option>
+                        <option>Fortnite</option>
+                    </select><p class="fas fa-plus color-clair-sesf"></p>
+                    <div class="invalid-feedback">
+                        Please select a valid Type.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="nbParticipant">Nombre de participant</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Nombre invalide
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="zip">Durée</label>
+                    <input type="text" class="form-control" id="zip" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Durée invalide
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-4">
+            <button class="btn bg-clair-sesf text-light btn-lg btn-block col-md-4 offset-md-4" type="submit">
+                Valider
+            </button>
+        </form>
+    </div>
+{% endblock %}

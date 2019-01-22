@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    {# Load the tag library #}
+    {% load bootstrap4 %}
+    {% load fontawesome %}
+    <!-- pour la liste de toutes les icon :  https://fontawesome.com/icons?d=gallery -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+
+    {# Display django.contrib.messages as Bootstrap alerts #}
+    {% bootstrap_messages %}
+    {% block ajout_head %}
+    {% endblock %}
+
+    <title>{% block title %}SESF{% endblock %}</title>
+</head>
+<body>
+
+
+{# Mettre des breadcrumb#}
+
+
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top nav-border-top">
+            <img src="{% static 'blog/img/logo_suisse_e_sport.png' %}" alt="LogosesfSmall" class="ml-3" width="180" height="72"/>
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse text-size-nav navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMaison" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ACCUEIL
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMaison">
+                            <a class="dropdown-item bg-clair-sesf  text-light " href="">Accueil</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAprop" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            UTILISATEUR
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownAprop">
+                            <a class="dropdown-item" href="{% url "informationUtilisateur" %}">information</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMaison" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             ADMIN EVENEMENT
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMaison">
+                            <a class="dropdown-item" href="{% url 'informationAdminEvenement' %}">Information</a>
+                            <a class="dropdown-item" href="{% url 'listeEvenement' %}">Liste evenement</a>
+                            <a class="dropdown-item" href="{% url 'creationEvenement' %}">Créer événement</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMaison" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              ADMIN SESF
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMaison">
+                            <a class="dropdown-item" href="{% url 'listeJoueur' %}">Liste joueurs</a>
+                            <a class="dropdown-item" href="{% url 'logCarte' %}">Log Carte</a>
+                            <a class="dropdown-item" href="{% url 'creationAdminEvenement' %}">enregistrer admin evenement</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMaison" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                CONNEXION
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMaison">
+                            <a class="dropdown-item" href="{% url "connexion" %}">Connexion</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+{% endblock %}
+
+<section id="content">
+    {% block content %}
+    {% endblock %}
+</section>
+</body>
+<footer class="blog-footer ">
+    <p class="mt-3">
+    Copyright 2019 © Swiss e-Sports Federation. All rights reserved <a href="#" class="color-clair-sesf">Privacy</a>
+        · <a href="#" class="color-clair-sesf">Terms</a></p>
+    <span>
+        <a class="icon-arrow-sesf" href="#">{% fontawesome_icon 'arrow-circle-up' %}</a>
+    </span>
+</footer>
+{% block script %}
+{% endblock %}
+</html>

@@ -1,0 +1,76 @@
+/*
+
+    Bannière
+
+*/
+.banniere {
+  height: 30vh;
+  min-height: 250px;
+  background: no-repeat center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.margeBanniere
+{
+    margin-top: 6%;
+
+}
+
+
+/*
+ Titre en mouvement en haut des page en générale;
+*/
+
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+    stroke: rgb(255, 255, 255);
+	animation-delay: -1s;
+}
+
+.text-copy:nth-child(2){
+	stroke: rgb(255, 185, 189);
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: rgb(255, 124, 132);
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: rgb(255, 72, 74);
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: rgba(255, 0, 0, 0.89);
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+
+
+
+

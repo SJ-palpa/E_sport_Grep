@@ -1,0 +1,101 @@
+body{
+  font-family: Arial;
+}
+
+/*
+    background
+*/
+
+.backgroud-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/*
+    nav-bar
+*/
+
+.text-size-nav
+{
+    font-size: 14px;
+}
+
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+}
+
+.nav-border-top
+{
+    border-width: 5px;
+    border-top-style: solid;
+    border-top-color: #f10000;
+}
+
+
+/*
+FOOTER
+*/
+
+.blog-footer {
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.icon-arrow-sesf{
+  font-size: 50px;
+  color: #f10000;
+}
+
+.icon-arrow-sesf:hover{
+  color: #d9004a;
+}
+
+
+/*
+Util
+*/
+
+.color-clair-sesf
+{
+    color: #f10000;
+}
+
+.color-fonce-sesf
+{
+    color: #d9004a;
+}
+
+
+.bg-clair-sesf
+{
+    background-color: #f10000;
+}
+
+.bg-fonce-sesf
+{
+    background-color: #d9004a;
+}
+
+
+.btn-sesf
+{
+    background-color: #f10000;
+}
+
+.btn-sesf:hover
+{
+    background-color: #d9004a;
+}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block ajout_head %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/adminSESF.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="container marge-top">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <div class="text-center icon-utilisateur mb-3 mt-3 ">
+                    <i class="fa fa-user-circle prefix color-clair-sesf"></i>
+                </div>
+                <h2>Elon Musk</h2>
+                <hr>
+                <p>
+                    Inscrit en 2018
+                </p>
+                <hr>
+                <p class="color-clair-sesf">Adresse :</p><input class="form-control validate"
+                                                                placeholder="Esplanade 13, CP-16, 1015 Lausanne, Suisse">
+                <hr>
+                <p class="color-clair-sesf">Mail :</p><input class="form-control validate"
+                                                             placeholder="elan@musk.gmail">
+                <hr>
+                <p class="color-clair-sesf">Nationalité :</p><input class="form-control validate"
+                                                                    placeholder=" Moldave">
+                <hr>
+                <p class="color-clair-sesf">Gamaer ID:</p>
+                <td><a class="btn btn-sesf text-light" role="button" data-toggle="modal" data-target="#ModalActivation">activer</a>
+
+                </td>
+                <td><a class="btn btn-secondary text-light" role="button">desactiver</a>
+                </td>
+                <hr>
+                <div class="container text-center mb-5">
+                    <a class="btn btn-sesf text-light" href="#" role="button">Valider</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="ModalActivation" tabindex="-1" role="dialog" aria-labelledby="ModalActivation"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gamer ID validation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Gamer ID attribué : 0912748741671
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-sesf text-light">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
